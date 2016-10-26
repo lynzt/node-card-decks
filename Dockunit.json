@@ -1,0 +1,15 @@
+{
+  "containers": [
+    {
+      "prettyName": "Node 6.0.1",
+      "image": "node:6-onbuild",
+      "beforeScripts": [
+        "npm install -g mocha",
+        "npm install chai",
+        "npm install underscore",
+        "chmod 755 -R test"
+      ],
+      "testCommand": "mocha --recursive"
+    }
+  ]
+}
