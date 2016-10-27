@@ -4,7 +4,7 @@ const expect = chai.expect;
 const Deck = require('./../../lib/deck');
 
 describe('Deck class tests', function() {
-  describe('test countCards()', function() {
+  describe.only('test countCards()', function() {
     it('should return standard deck of 52', function() {
       let oneDeck = new Deck();
       expect(oneDeck.countCards('allCards')).to.equal(52);
@@ -14,9 +14,14 @@ describe('Deck class tests', function() {
       expect(oneDeck.countCards('cardsInDeck')).to.equal(54);
     });
     // TODO: make this more specific? remove red jacks? remove 3 of hearts?
-    it('should return deck with [2, jack and 6] removed from deck', function() {
+    it('should return deck with [2, jack, 6] removed from deck', function() {
       let oneDeck = new Deck({cardsNotUsed: ['2', 'jack', '6']});
       expect(oneDeck.countCards('cardsInDeck')).to.equal(40);
+    });
+    it('should return 2 deck which is 104 cards', function() {
+      let oneDeck = new Deck({nbrOfDecks: 2});
+      console.dir(oneDeck);
+      expect(oneDeck.countCards('cardsInDeck')).to.equal(104);
     });
   });
   describe('test getKeys()', function() {
