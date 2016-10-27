@@ -1,7 +1,7 @@
 'use strict';
 const chai = require('chai');
 const expect = chai.expect;
-const Card = require('./../../../lib/classes/card');
+const Card = require('./../../lib/card');
 
 describe('Card class tests', function() {
   describe('test getSuit()', function() {

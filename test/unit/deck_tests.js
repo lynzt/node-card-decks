@@ -1,10 +1,10 @@
 'use strict';
 const chai = require('chai');
 const expect = chai.expect;
-const Deck = require('./../../../lib/classes/deck');
+const Deck = require('./../../lib/deck');
 
 describe('Deck class tests', function() {
-  describe.only('test countCards()', function() {
+  describe('test countCards()', function() {
     it('should return standard deck of 52', function() {
       let oneDeck = new Deck();
       expect(oneDeck.countCards('allCards')).to.equal(52);

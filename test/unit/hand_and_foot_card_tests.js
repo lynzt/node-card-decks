@@ -1,7 +1,7 @@
 'use strict';
 const chai = require('chai');
 const expect = chai.expect;
-const HandAndFootCard = require('./../../../lib/classes/hand_and_foot_card');
+const HandAndFootCard = require('./../../lib/hand_and_foot_card');
 
 describe('HandAndFootCard class tests', function() {
   describe('Should test isWild()', function() {
